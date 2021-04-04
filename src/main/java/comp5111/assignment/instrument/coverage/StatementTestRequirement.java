@@ -1,6 +1,5 @@
 package comp5111.assignment.instrument.coverage;
 
-import comp5111.assignment.instrument.runtime.InstrumentConstructor;
 import comp5111.assignment.instrument.runtime.InstrumentField;
 import comp5111.assignment.instrument.runtime.TestRequirement;
 
