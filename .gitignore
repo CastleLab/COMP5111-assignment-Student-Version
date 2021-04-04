@@ -99,6 +99,7 @@ local.properties
 evosuite-report
 src/test/evosuite*
 src/test/randoop*
+!src/test/randoop0
 target
 src/test/report
 /bin/
