@@ -5,6 +5,7 @@ import comp5111.assignment.instrument.runtime.TestRequirement;
 import comp5111.assignment.tools.Pair;
 import soot.*;
 import soot.jimple.*;
+import soot.jimple.internal.JIdentityStmt;
 import soot.tagkit.LineNumberTag;
 import soot.tagkit.Tag;
 import soot.util.Chain;
@@ -321,6 +322,12 @@ public abstract class InstrumentTransformer extends BodyTransformer {
             if (InstrumentTransformer.isLocalProfilerAssignStmt(unit)) {
                 continue;
             }
+
+            // skip instrumentation of JIdentityStmt in favor of FAQ-Q3
+            if (unit instanceof JIdentityStmt) {
+                continue;
+            }
+
             InstrumentGuider instrumentGuider = this.doTransform(unit, body);
             if (instrumentGuider == null) {
                 continue;
