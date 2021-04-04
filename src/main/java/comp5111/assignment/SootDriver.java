@@ -16,7 +16,15 @@ public class SootDriver {
         G.reset();
 
         /*Set the soot-classpath to include the helper class and class to analyze*/
-        Options.v().set_soot_classpath(Scene.v().defaultClassPath() + ":./lib/junit-4.12.jar:./lib/hamcrest-core-1.3.jar:" + targetPath);
+        String classPathSeparator = ":";
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            classPathSeparator = ";";
+        }
+        String classPath =Scene.v().defaultClassPath() + 
+        		classPathSeparator + "./lib/junit-4.12.jar" +
+        		classPathSeparator + "./lib/hamcrest-core-1.3.jar" +
+        		classPathSeparator + targetPath;
+        Options.v().set_soot_classpath(classPath);
         Options.v().set_output_dir("./target/classes");
 
         // retain line numbers
