@@ -152,7 +152,7 @@ Your grade in this task is related to both your average ranking (as mentioned in
 Your score of each faulty statement `s` is: Score<sub>s</sub> = (25% / 6N) * (`your ranking` - `default ranking`) / (`default ranking` - `highest ranking among classmates`), where N is the total number of injected faulty statements, and `default ranking` is the ranking based on the provided test suite.
 
 Suppose `NT` represents the average number of manually-written tests that you have added to each of the given six test suite. 
-The total grade is given by ΣScore<sub>s</sub> *  (`largest NT among classmates` - `your NT`) / (`largest NT among classmates` - `smallest NT among classmates`)
+The total grade is given by ΣScore<sub>s</sub> *  (`largest NT among classmates` - `your NT` + 1) / (`largest NT among classmates` - `smallest NT among classmates`)
 
 **NOTE** We will run your refined test suites using our fault localization tool with `Ochiai` ranking function. 
 So your score on task 2 will not be affected by the correctness of your implementation. 
