@@ -13,7 +13,7 @@ public class Profiler<TestRequirementType extends TestRequirement> {
     private static Profiler<? extends TestRequirement> profiler = null;
     private static List<OnVisitCallback> visitCallbacks = null;
     private static List<OnRegisterCallback> registerCallbacks = null;
-    private final TestRequirementCollection<TestRequirementType> testRequirementCollection;
+    public final TestRequirementCollection<TestRequirementType> testRequirementCollection;
 
     private Profiler() {
         this.testRequirementCollection = new TestRequirementCollection<>();

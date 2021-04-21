@@ -29,6 +29,8 @@
                         </goals>
                         <configuration>
                             <sources>
+                                <source>src/test/asg1-grade</source>
+                                <source>src/test/asg2-grade</source>
                                 <source>src/test/fault-revealing0</source>
                                 <source>src/test/fault-revealing1</source>
                                 <source>src/test/fault-revealing2</source>
@@ -67,7 +69,6 @@
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
             <version>1.3</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.soot-oss</groupId>
@@ -78,7 +79,6 @@
             <groupId>org.evosuite</groupId>
             <artifactId>evosuite-standalone-runtime</artifactId>
             <version>1.0.6</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
